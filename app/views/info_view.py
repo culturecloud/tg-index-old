@@ -13,6 +13,7 @@ from .base import BaseView
 log = logging.getLogger(__name__)
 Markup = markupsafe.Markup
 
+
 class InfoView(BaseView):
     @aiohttp_jinja2.template("info.html")
     async def info(self, req: web.Request) -> web.Response:
