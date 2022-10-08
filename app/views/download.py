@@ -56,14 +56,14 @@ class Download(BaseView):
             offset = req.http_range.start or 0
             limit = req.http_range.stop or size
             request = req
-            range_header = request.headers.get('Range', 0)
+            range_header = request.headers.get("Range", 0)
             if range_header:
-              range_data = range_header.replace('bytes=', '').split('-')
-              from_bytes = int(range_data[0])
-              until_bytes = int(range_data[1]) if range_data[1] else file_size - 1
+                range_data = range_header.replace("bytes=", "").split("-")
+                from_bytes = int(range_data[0])
+                until_bytes = int(range_data[1]) if range_data[1] else file_size - 1
             else:
-              from_bytes = request.http_range.start or 0
-              until_bytes = request.http_range.stop or file_size - 1
+                from_bytes = request.http_range.start or 0
+                until_bytes = request.http_range.stop or file_size - 1
 
             req_length = until_bytes - from_bytes
             # offset = req.http_range.start or 0
@@ -95,8 +95,8 @@ class Download(BaseView):
                 "Content-Type": mime_type,
                 "Content-Range": f"bytes {offset}-{limit}/{size}",
                 "Accept-Ranges": "bytes",
-                "Content-Disposition": f'attachment; filename="{file_name}"'
-            }
+                "Content-Disposition": f'attachment; filename="{file_name}"',
+            },
         )
 
         if return_resp.status == 200:
