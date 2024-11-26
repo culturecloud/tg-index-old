@@ -12,6 +12,7 @@ load_dotenv()
 
 log = logging.getLogger(__name__)
 
+"""
 CONFIG_FILE_URL = os.environ.get("CONFIG_FILE_URL", None)
 
 if CONFIG_FILE_URL:
@@ -20,6 +21,7 @@ if CONFIG_FILE_URL:
     wget.download(CONFIG_FILE_URL, out=".env")
     print("\n")
     load_dotenv()
+"""
 
 try:
     port = int(os.environ.get("PORT", "8080"))

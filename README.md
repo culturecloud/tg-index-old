@@ -13,7 +13,7 @@
 
 ## Deploy Guide (Repl.it)
 
-A detailed and beginner friendly guide on how to deploy this project on a free instance of https://repl.it can be found [here](replit-deploy-guide.md).
+A detailed and beginner friendly guide on how to deploy this project on a free instance of https://repl.it can be found [here](guides/replit.md).
 
 ## Deploy Guide
 
